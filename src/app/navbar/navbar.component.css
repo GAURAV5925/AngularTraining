@@ -1,0 +1,45 @@
+
+.custom-navbar {
+    background-color: #000 !important;
+  }
+.header {
+  display: flex;
+  justify-content: space-between;
+  background-color: #000 !important;
+  padding: 2%;
+}
+
+.menu_items{
+  color: white;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.nav-link{
+  margin: 15px;
+}
+
+.search_bar{
+  height: 50px;
+  display: flex;
+  flex-direction: row;
+}
+
+#service_drop{
+  background-color: #000;
+  color: white;
+  border: none;
+  height: 30px;
+  margin: 12px 0px;
+}
+
+
+.dropdown-item:hover{
+  color: black !important;
+
+}
+
+.bg-dark{
+  background-color: #000 !important;
+}

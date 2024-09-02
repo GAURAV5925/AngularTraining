@@ -1,0 +1,151 @@
+
+<div class="container mt-2">
+  <div class="row" id="contactus">
+    <h2 class="text-center text-danger mt-3"> Client Testimonials</h2>
+  </div>
+  
+  <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <div class="card-group">
+          <div class="card m-2">
+            <img src="../../assets/images/client1.jpg" class="card-img-top" alt="Client 1">
+            <div class="card-body">
+              <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis officia
+                distinctio, asperiores et harum non?</p>
+              <h5 class="card-title">Jim Halpert</h5>
+              <p>Manager, Matrix LLP</p>
+            </div>
+          </div>
+          <div class="card m-2">
+            <img src="../../assets/images/client2.jpg" class="card-img-top" alt="Client 2">
+            <div class="card-body">
+              <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis officia
+                distinctio, asperiores et harum non?</p>
+              <h5 class="card-title">Tom Cooper</h5>
+              <p>Director, Cooper & Sons</p>
+            </div>
+          </div>
+          <div class="card m-2">
+            <img src="../../assets/images/client3.jpg" class="card-img-top" alt="Client 3">
+            <div class="card-body">
+              <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis officia
+                distinctio, asperiores et harum non?</p>
+              <h5 class="card-title">Robert Ashton</h5>
+              <p>CFO, Tata Group</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <div class="card-group">
+          <div class="card m-2">
+            <img src="../../assets/images/client4.jpg" class="card-img-top" alt="Client 4">
+            <div class="card-body">
+              <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis officia
+                distinctio, asperiores et harum non?</p>
+              <h5 class="card-title">Maeven Sobers</h5>
+              <p>CEO, Roshton Technology</p>
+            </div>
+          </div>
+          <div class="card m-2">
+            <img src="../../assets/images/client5.jpg" class="card-img-top" alt="Client 5">
+            <div class="card-body">
+              <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis officia
+                distinctio, asperiores et harum non?</p>
+              <h5 class="card-title">Hariprasad M.</h5>
+              <p>CEO, L&T</p>
+            </div>
+          </div>
+          <div class="card m-2">
+            <img src="../../assets/images/client6.jpg" class="card-img-top" alt="Client 6">
+            <div class="card-body">
+              <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis officia
+                distinctio, asperiores et harum non?</p>
+              <h5 class="card-title">Andrew Bernard</h5>
+              <p>Managing Director, ITC</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+  
+<div class="row text-center mb-2">
+  <p>
+  <h2>Any Query ? <a href="#exampleModal"
+      class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover"
+      data-bs-toggle="modal" data-bs-target="#exampleModal">Connect Us</a></h2>
+
+</div>
+
+<div class="modal fade" #myModalClose id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5 font-weight-bold text-danger" id="exampleModalLabel">Contact Us</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form name="myForm"  method="post" [formGroup]="reactiveForm" (ngSubmit)="onSubmit()">
+          <div class="form-group mb-3" id="nname">
+            <label for="name" class="m-1">Name</label>
+            <input type="text" id="name" name="fname" class="form-control" placeholder="eg: Gaurav Jha"
+              formControlName="clientName">
+              <div *ngIf="reactiveForm.get('clientName')?.touched && reactiveForm.get('clientName')?.invalid">
+                <small *ngIf="reactiveForm.get('clientName')?.errors?.['required']">*Name is Required</small>
+                <small *ngIf="reactiveForm.get('clientName')?.errors?.['minlength']">*Name is too small</small>
+              </div>
+              
+            <!-- <small *ngIf="reactiveForm.get('clientName')?.invalid && reactiveForm.get('clientName')?.touched">*Name is Required</small> -->
+          </div>
+
+          <div class="form-group mb-3">
+            <label for="org" class="m-1">Organisation Name</label>
+            <input type="text" id="org" class="form-control" formControlName="organisationName">
+            <small *ngIf="reactiveForm.get('organisationName')?.invalid && reactiveForm.get('organisationName')?.touched">*Organization Name is Required</small>
+          </div>
+
+          <div class="form-group mb-3">
+            <label for="mobile" class="m-1">Mobile Number</label>
+            <input type="tel" id="mobile" class="form-control" placeholder="eg: 1234567890"
+              formControlName="mobileNo">
+              <small *ngIf="reactiveForm.get('mobileNo')?.invalid && reactiveForm.get('mobileNo')?.touched">*Mobile Number is Required</small>
+          </div>
+
+          <div class="form-group mb-3">
+            <label for="email" class="m-1">Email ID</label>
+            <input type="text" id="email" class="form-control" formControlName="clientEmail">
+            <small *ngIf="reactiveForm.get('clientEmail')?.invalid && reactiveForm.get('clientEmail')?.touched">*Email is Required</small>
+          </div>
+
+          <div class="from-group mb-3">
+            <label for="exampleFormControlTextarea1" class="form-label">Please Enter Your Query</label>
+            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"
+              formControlName="queryBox"></textarea>
+              <small *ngIf="reactiveForm.get('queryBox')?.invalid && reactiveForm.get('queryBox')?.touched">*Please Enter Valid Query</small>
+          </div>
+
+          <div class="mb-3 form-check"><input type="checkbox" id="logged" class="form-check-input"
+              formControlName="termsCondition">
+            <label for="logged" class="form-check-label">I Agree with All T&C</label>
+          </div>
+
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" (click)="closeModel()" data-bs-dismiss="modal">Close</button>
+        <button type="submit"  class="btn btn-primary" (click)="closeModel()" [disabled]="reactiveForm.invalid">Submit</button>
+      </div>
+    </div>
+  </div>
+</div>
+</div>

@@ -1,0 +1,22 @@
+
+.prod-img2{
+    max-height: 100%;
+    max-width: 100%;
+}
+
+
+.client-logo{
+    height: 70px;
+    width: 130px;
+}
+
+
+@media only screen and (max-width: 480px){
+  
+    .services-coll{
+        width: 100% !important;
+        text-align: left;
+    }
+
+}
+

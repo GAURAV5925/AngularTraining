@@ -1,0 +1,21 @@
+<div class="container mb-3">
+    <div class="row">
+        <div class="col-12">
+            <h1 class="text-center m-2 text-danger"><strong>PROJECTS</strong></h1>
+        </div>
+    </div>
+    <div class="row">
+        <ng-container *ngFor="let title of projects">
+            <div class="col-lg-3 col-md-4 col-sm-6 col-12 mb-4 d-flex align-items-stretch">
+                <div class="card w-100">
+                    <img [src]="title.imgSource" class="card-img-top p-2" [alt]="title.name">
+                    <div class="card-body">
+                        <h5 class="card-title text-primary">{{title.name}}</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <a href="#" class="btn btn-primary">Read More</a>
+                    </div>
+                </div>
+            </div>
+        </ng-container>
+    </div>
+</div>

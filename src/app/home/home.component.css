@@ -1,0 +1,41 @@
+body { -webkit-text-size-adjust: none; }
+
+.carousel-caption{
+    position: absolute;
+    bottom: 150px;
+    
+}
+
+
+.btn-trans{
+    border: 2px solid white;
+    width: 150px;
+    height: 40px;
+}
+
+.btn-trans:hover{
+    background-color: white;
+    color: black !important;
+}
+
+
+.tagline{
+    font-size: 70px;
+}
+
+.cont-size{
+    height: 590px;
+}
+
+
+@media only screen and (min-width: 845){
+    .tagline{
+        font-size: 4vh;
+    }
+}
+
+@media only screen and (max-width: 844px){
+    .tagline{
+        font-size: 3vh;
+    }
+}
